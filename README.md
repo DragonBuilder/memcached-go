@@ -36,3 +36,5 @@ Multiple ways to install Memcached.
 - Package `cmd/with_msgpack/main.go` uses [msgpack](https://github.com/vmihailenco/msgpack) which has no issues decoding a byte array into an `interface{}` variable.
 
 - Package `cmd/with_msgpack_advanced/main.go` uses `encoding/json` to unmarshall map values to concrete structs.
+
+- Package `cmd/with_json/main.go` uses `encoding/json` to both encode and decode values saved to memcached. Can be used with primitve types and concrete structs.
