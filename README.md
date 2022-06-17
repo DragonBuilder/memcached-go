@@ -32,6 +32,5 @@ Multiple ways to install Memcached.
     - One issue here is that `gob` fails when the byte array is decoded into an `interface{}` variable, and hence needs to be passed the variable of correct concrete type to be decoded into.
 
 - Package `cmd/advanced_serialization/main.go` has experimental code to work out how to decode the byte array received from memcached server into an `interface{}` variable using `gob` package. Haven't been able to get a working solution.
-    - Doesn't work with primitive types, but does it work with structs?
 
 - Package `cmd/with_msgpack/main.go` uses [msgpack](https://github.com/vmihailenco/msgpack) which has no issues decoding a byte array into an `interface{}` variable.
