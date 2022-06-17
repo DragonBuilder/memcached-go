@@ -1,4 +1,4 @@
-package lib
+package gob_usage
 
 import (
 	"bytes"

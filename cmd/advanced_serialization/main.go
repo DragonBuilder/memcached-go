@@ -10,7 +10,9 @@ import (
 
 var cache = memcache.New("localhost:11211")
 
+//will error for string, might work with structs
 func main() {
+	gob_usage.RegisterType(string("ss"))
 	if err := cache.Set(&memcache.Item{
 		Key:        "name",
 		Value:      gob_usage.Serialize("aneesh"),
@@ -23,7 +25,7 @@ func main() {
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
-	var r string
-	gob_usage.DeSerialize(val.Value, &r)
+	var r interface{}
+	gob_usage.InterfaceDeserialise(val.Value, r)
 	fmt.Println(r)
 }
