@@ -38,3 +38,8 @@ Multiple ways to install Memcached.
 - Package `cmd/with_msgpack_advanced/main.go` uses `encoding/json` to unmarshall map values to concrete structs.
 
 - Package `cmd/with_json/main.go` uses `encoding/json` to both encode and decode values saved to memcached. Can be used with primitve types and concrete structs.
+
+
+### Note
+1. Problem with encoding and decoding `error` types. Refer https://stackoverflow.com/questions/44989924/golang-error-types-are-empty-when-encoded-to-json
+    1. Will need to encode the actual error string and then when decoding will need to have a way to recognise the string is error and convert to error from there.
