@@ -1,4 +1,4 @@
-# Using [Memcached](https://memcached.org/) with Go language.
+# Using [Memcached](https://memcached.org/) with [Go language](https://go.dev/).
 
 ## Introduction
 
