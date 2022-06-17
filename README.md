@@ -34,3 +34,5 @@ Multiple ways to install Memcached.
 - Package `cmd/advanced_serialization/main.go` has experimental code to work out how to decode the byte array received from memcached server into an `interface{}` variable using `gob` package. Haven't been able to get a working solution.
 
 - Package `cmd/with_msgpack/main.go` uses [msgpack](https://github.com/vmihailenco/msgpack) which has no issues decoding a byte array into an `interface{}` variable.
+
+- Package `cmd/with_msgpack_advanced/main.go` uses `encoding/json` to unmarshall map values to concrete structs.
